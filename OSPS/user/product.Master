@@ -1,0 +1,143 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="product.master.cs" Inherits="OSPS.user.product" %>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/user.css">
+
+     <style>
+         input[type=text], select {
+    width: 100%;
+    padding: 3px 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 6px 12px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.g {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+  
+  div.gallery {
+    
+     
+     
+    margin: 5px;
+    border: 1px solid #ccc;
+    width: 250px;
+    height:200px;
+    display:inline-block;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+div.gallery img {
+    left:50px;
+    width: 60%;
+    height:150px;
+}
+div.desc {
+    padding: 15px;
+    text-align: center;
+    display:inline-block;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+}
+</style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header"><a class="navbar-brand navbar-link" href="../user/Defult.aspx"><i class="glyphicon glyphicon-phone"></i>SMARTPHONE STORE</a>
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active" role="presentation"><a href="../user/product.aspx">Shop Now</a></li>
+                    <li role="presentation"><a href="#">Second Item</a></li>
+                    <li role="presentation"><a href="../Admin.aspx">Admin</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="row"></div>
+    <section class="testimonials"></section>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-md-offset-0">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><a href="../user/product.aspx">All Brand</a></h3></div>
+                        <div class="panel-body">
+                                  <asp:DataList ID="dd" class="nav navbar-nav" runat="server">
+                         <ItemTemplate>
+                            <ul class="nav nav-tabs nav-stacked">
+                          
+                                   <li> <a href="product.aspx?Brand=<%#Eval("Brand") %>"><%#Eval("Brand") %></a></li>
+                               
+                             
+                            </ul>
+                               </ItemTemplate>
+                         </asp:DataList>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Panel Heading</h3></div>
+                        <div class="panel-body">
+                             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+                                   </asp:ContentPlaceHolder>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

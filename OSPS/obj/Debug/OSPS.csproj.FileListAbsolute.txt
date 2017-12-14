@@ -1,0 +1,6 @@
+E:\OSPS\OSPS\bin\OSPS.dll.config
+E:\OSPS\OSPS\bin\OSPS.dll
+E:\OSPS\OSPS\bin\OSPS.pdb
+E:\OSPS\OSPS\obj\Debug\OSPS.csprojResolveAssemblyReference.cache
+E:\OSPS\OSPS\obj\Debug\OSPS.dll
+E:\OSPS\OSPS\obj\Debug\OSPS.pdb
